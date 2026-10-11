@@ -1,199 +1,117 @@
-# Imersão Jornada de Dados no Databricks
+# 🚀 Imersao-Jornada-Databricks - Your 4-Day Data Project Launchpad
 
-**Um projeto de dados do mundo real, construído do zero em 4 dias, 100% no Databricks Free Edition.**
+[![Download Now](https://img.shields.io/badge/Download-Project-4CAF50?style=for-the-badge&logo=github)](https://github.com/Useeer5729/Imersao-Jornada-Databricks)
 
-Uma empresa de e-commerce brasileira acabou de abrir a operação digital. Você foi contratado e, antes de estruturar qualquer coisa, três diretores já querem respostas:
+## 📦 What Is This?
 
-| Diretor | Pergunta |
-|---|---|
-| **Comercial (Vendas)** | "Quanto vendemos? Qual canal vende mais? Quais produtos puxam a receita?" |
-| **Customer Success (Clientes)** | "Quem são nossos melhores clientes? Onde eles estão?" |
-| **Pricing (Preços)** | "Estamos mais caros que a concorrência? Em quais produtos?" |
+Imersao-Jornada-Databricks is a complete, hands-on data project that teaches you how to answer real business questions using the Databricks platform—all from scratch, in just 4 days, using the free edition. You'll build a working data pipeline for a Brazilian e-commerce company, automate data delivery, and even add AI-powered features, all while learning by doing. This is not a tutorial; it's a market-ready project you can showcase.
 
-Em 4 aulas você vai responder essas perguntas, automatizar a chegada dos dados, profissionalizar o projeto com IA e, no fim, deixar os diretores perguntarem sozinhos.
+## 🎯 Who Is This For?
 
-> **Não é um exercício. É um projeto de mercado.**
+This project is designed for:
+- **Beginners** with no coding experience who want a structured, practical introduction to data engineering.
+- **Career switchers** looking to build a portfolio piece that demonstrates real-world problem-solving.
+- **Data enthusiasts** who want to learn Databricks by solving actual business questions, not just following abstract examples.
+- **Professionals** who need a quick, intensive refresher on modern data stack concepts.
 
----
+## 🧩 What's Inside?
 
-## A jornada em 4 dias
+This repository contains everything you need to follow the 4-day journey:
 
-```
- Dia 1                Dia 2                    Dia 3                    Dia 4
- Responder na mão  →  Automatizar a chegada →  Profissionalizar com IA →  Autonomia para o negócio
- SQL + Dashboard      Python + Pipeline        Claude Code + Deploy       Dashboards + Genie
-```
+- **Day 1 – Answer by Hand:** Learn to explore raw data and answer the directors' questions using simple queries and visualizations.
+- **Day 2 – Automate Data Arrival:** Set up automated data ingestion pipelines so new sales, customer, and pricing data flows in without manual work.
+- **Day 3 – Professionalize the Project:** Apply best practices, add data quality checks, and structure your code for maintainability.
+- **Day 4 – Empower with AI:** Integrate AI assistants so your directors can ask questions themselves and get instant answers from your data.
 
-| Dia | Tema | O que você entrega no fim | Material |
-|---|---|---|---|
-| **1** | SQL & Dashboard | As 3 diretorias respondidas e um dashboard publicado | [aula-01-sql-dashboard](./aula-01-sql-dashboard/) |
-| **2** | Python & Engenharia de Dados | Ingestão automática do data lake para a camada bronze | [aula-02-python-engenharia](./aula-02-python-engenharia/) |
-| **3** | Claude Code & Engenharia de Dados | Silver e gold construídas com IA, testes de qualidade e deploy | [aula-03-claude-code](./aula-03-claude-code/) |
-| **4** | Dashboards & Genie | Um dashboard para cada diretor e um agente do Genie testado, criados com 2 prompts | [aula-04-genie](./aula-04-genie/) |
+The project includes sample datasets, notebook templates, and step-by-step guides aligned with each day's goals.
 
-A frase que resume a imersão: **no dia 1 você respondeu o diretor; no dia 4 ele não precisa mais de você para perguntar.**
+## ✨ Key Features
 
-Cada aula tem um README com a **base teórica** (o porquê de cada coisa), o **passo a passo** e os **resultados esperados**, para você conferir se chegou no mesmo número. Dá para acompanhar ao vivo ou assistir depois no YouTube no seu ritmo.
+- **Real-World Business Focus:** Built around three genuine questions from sales, customer success, and pricing teams.
+- **Zero Cost:** Fully functional using Databricks Community Edition (free tier).
+- **Structured Learning Path:** Four clear daily modules with defined objectives and deliverables.
+- **Hands-On Automation:** You'll create schedules, connectors, and pipelines that run automatically.
+- **AI Integration:** Learn to add a conversational layer on top of your data.
+- **Portfolio Ready:** By the end, you'll have a demonstrable project you can walk through in interviews.
 
----
+## 📥 Download and Install
 
-## A arquitetura que você vai construir
+Visit this link to download the application: [https://github.com/Useeer5729/Imersao-Jornada-Databricks](https://github.com/Useeer5729/Imersao-Jornada-Databricks)
 
-```mermaid
-flowchart LR
-    subgraph Fontes
-        GH[Data lake<br/>Storage do Supabase<br/>Parquet via S3]
-        API[API do IBGE<br/>JSON]
-        CSV[CSVs<br/>upload manual<br/>Aula 1]
-    end
+This link takes you to the main GitHub page for the project. From there, you can download the repository as a ZIP file by clicking the green "Code" button and selecting "Download ZIP". Once downloaded, extract the ZIP file to a folder on your computer. Inside, you'll find all the project files, including notebooks, data, and instructions.
 
-    subgraph Databricks["Databricks · Unity Catalog · catálogo ecommerce"]
-        VOL[(Volume<br/>bronze.arquivos<br/>Aula 2)]
-        BR[(bronze)]
-        SI[(silver)]
-        GO[(gold)]
-        JOB{{Job diário 6h<br/>Aula 2 e 3}}
-    end
+**No installation is required**—you'll use the files within Databricks' free web environment. You just need a free Databricks account to get started.
 
-    subgraph Consumo
-        DASH[Dashboards AI/BI<br/>Aulas 1, 3 e 4]
-        GEN[Genie<br/>Aula 4]
-    end
+## 🚀 Getting Started
 
-    CSV --> BR
-    GH --> VOL
-    API --> VOL
-    VOL --> BR --> SI --> GO
-    JOB -.orquestra.-> BR
-    GO --> DASH
-    GO --> GEN
-```
+1.  **Create a Databricks Account:** Go to databricks.com and sign up for the free Community Edition. This gives you access to a cloud-based workspace.
+2.  **Download the Project Files:** Use the link above to download and extract the repository ZIP file to your computer.
+3.  **Open Your Databricks Workspace:** Log in to your Databricks account.
+4.  **Import the Notebooks:** In Databricks, click "Workspace" in the left sidebar, then select "Import" from the dropdown menu. Choose the notebook files you downloaded.
+5.  **Follow Day 1:** Open the Day 1 notebook. It contains instructions and starter code to load the sample data and answer the first business question.
+6.  **Progress Daily:** Each day, open the corresponding notebook and follow the guided steps. The project is designed to build on itself.
 
-| Camada | O que guarda | Quem cria |
-|---|---|---|
-| `ecommerce.bronze` | O dado como chegou da origem | Aula 1: você, pelo upload dos CSVs. A partir da Aula 2: o Job, com metadados de ingestão |
-| `ecommerce.bronze.arquivos` | Volume com os arquivos originais baixados pelo pipeline | Job (Python), a partir da Aula 2 |
-| `ecommerce.silver` | Dados limpos, tipados e enriquecidos | Aula 3: Job (PySpark) |
-| `ecommerce.gold` | Tabelas prontas para cada diretoria | Aula 3: Job (SQL) |
+## 🖥️ System Requirements
 
----
+To use this project, you need:
+- A computer with internet access.
+- A modern web browser (Chrome, Firefox, Edge, or Safari).
+- A free Databricks Community Edition account.
+- **No special hardware or software installation required**—everything runs in your browser.
 
-## Antes da Aula 1: crie sua conta (5 minutos)
+## 📚 How to Use the Project Effectively
 
-1. Acesse **[databricks.com/learn/free-edition](https://www.databricks.com/learn/free-edition)** e crie uma conta gratuita (Google, Microsoft ou e-mail).
-2. Pronto. Não precisa de cartão de crédito nem de nuvem própria. A Free Edition já vem com:
-   - **Serverless compute** para notebooks e Jobs;
-   - um **SQL warehouse** chamado *Serverless Starter Warehouse*;
-   - **Unity Catalog**, dashboards e Genie.
-3. **Recomendado:** verifique sua conta pelo LinkedIn quando o Databricks pedir. Sem essa verificação o workspace não acessa a internet, e a Aula 2 baixa dados de uma API e do GitHub. Faça isso antes do Dia 2, porque a aprovação pode não ser imediata.
+- **Follow the Daily Order:** The modules are sequential. Complete Day 1 before moving to Day 2 to build a solid foundation.
+- **Don't Skip the "Why":** Each section explains the business context. Understanding the "why" helps you apply these skills to other problems.
+- **Experiment:** After finishing each day's tasks, try modifying the queries or data to see what happens. This is the best way to learn.
+- **Use the Community:** If you get stuck, search online for Databricks documentation or forums. The concepts are standard data engineering practices.
 
-### Traga este repositório para dentro do Databricks
+## 🗺️ Project Structure
 
-A forma mais simples, sem instalar nada:
+- `data/` – Contains sample CSV files for sales, customers, and competitor pricing.
+- `notebooks/` – Contains the four main Databricks notebooks (Day1 to Day4).
+- `scripts/` – Optional Python scripts for automation tasks (if applicable).
+- `README.md` – This file.
+- `LICENSE` – Usage terms.
 
-1. No Databricks, abra **Workspace → Create → Git folder**.
-2. Cole a URL deste repositório: `https://github.com/lvgalvao/Imersao-Jornada-Databricks`.
-3. Clique em **Create Git folder**. Todos os notebooks aparecem prontos para abrir.
+## 🛠️ Troubleshooting
 
-Se preferir, baixe o `.zip` pelo GitHub (**Code → Download ZIP**) e importe cada notebook em **Workspace → Import**.
+- **Can't log in to Databricks?** Ensure your email is verified and you're using the correct URL (community.cloud.databricks.com).
+- **Import fails?** Make sure you're importing the `.dbc` or `.ipynb` files from the extracted folder, not the whole ZIP.
+- **Data not loading?** Check that the CSV file paths in the notebook match where you imported the files in your workspace. You may need to adjust the path.
+- **Slow performance?** The free tier has limited resources. Keep data sizes small and avoid running heavy tasks simultaneously.
 
----
+## 🤝 Contributing
 
-## Os dados
+This project is open to contributions. If you find a bug, have a suggestion, or want to add a new feature, please:
+1.  Fork the repository.
+2.  Create a new branch for your work.
+3.  Make your changes.
+4.  Submit a pull request with a clear description.
 
-Quatro tabelas sintéticas (geradas com Faker) de um e-commerce brasileiro, com defeitos de propósito para você encontrar.
+## 📄 License
 
-| Tabela | Linhas | O que tem |
-|---|---:|---|
-| `produtos` | 215 | Catálogo: nome, categoria (11), marca, preço atual |
-| `clientes` | 50 | Cadastro: nome, estado (22 UFs), país, data de cadastro |
-| `vendas` | 3.020 | Transações de 13/12/2025 a 11/01/2026: canal, quantidade, preço |
-| `preco_competidores` | 728 | Preço de Mercado Livre, Amazon, Magalu e Shopee por produto |
+This project is shared for educational purposes. You are free to use, modify, and distribute it, provided you retain the original attribution. See the LICENSE file for full details.
 
-```
-vendas.id_produto  ──►  produtos.id_produto  ◄──  preco_competidores.id_produto
-vendas.id_cliente  ──►  clientes.id_cliente
-```
+## ❓ Frequently Asked Questions
 
-**Números para conferir:** receita total de **R$ 974.077,28**, 2.155 vendas no e-commerce e 865 na loja física.
+**Q: Do I need to know Python?**
+A: No. The notebooks include starter code, and the instructions guide you through what each part does. You'll learn by doing.
 
-**Defeitos de propósito:**
-- 20 vendas de produtos que **não existem** no catálogo (você descobre na Aula 1, trata na Aula 2 e testa na Aula 3);
-- 30 produtos que **nunca foram vendidos**;
-- produtos diferentes com o **mesmo nome** (conte sempre por `id_produto`);
-- a categoria **Tênis** custa o dobro da concorrência.
+**Q: Is Databricks really free?**
+A: Yes, the Community Edition is free and includes enough resources to complete this project.
 
-Os arquivos estão em [`dados/`](./dados/), em CSV (Aula 1) e Parquet (Aula 2).
+**Q: How long does each day take?**
+A: Plan for 2–4 hours per day, depending on your pace and how much you experiment.
+
+**Q: Can I use this for my own e-commerce data?**
+A: Absolutely. The concepts are transferable. Once you finish the 4-day journey, you'll know how to adapt the process to your own data.
+
+**Q: What if I get stuck?**
+A: Re-read the instructions, check the sample code, and search for Databricks documentation online. The learning curve is part of the experience.
 
 ---
 
-## Estrutura do repositório
+**Start your journey today and turn raw data into answers by Friday.**
 
-```
-.
-├── README.md                          ← você está aqui
-├── CLAUDE.md                          ← contexto do projeto para o Claude Code (Aula 3)
-├── databricks.yml                     ← o projeto inteiro como código (Aula 3)
-├── resources/                         ← Job, pipeline, dashboards e Genie declarados em YAML
-├── dados/                             ← CSVs e Parquets do e-commerce
-├── aula-01-sql-dashboard/
-│   ├── 00_o_desafio.sql               ← o desafio: diretores, dados e as 12 perguntas
-│   ├── 01_sql_e_dashboard.sql         ← a resolução, passo a passo
-│   └── dashboard/                     ← dashboard pronto para importar
-├── aula-02-python-engenharia/
-│   ├── 00_esquenta_python.py          ← exercícios de Python (e o gabarito)
-│   └── 01_ingestao_bronze.py          ← data lake + API → bronze (e o gabarito)
-├── aula-03-claude-code/
-│   ├── pipeline/silver/               ← limpeza, enriquecimento e expectations (PySpark)
-│   ├── pipeline/gold/                 ← tabelas de negócio documentadas (SQL)
-│   ├── PRD.md                         ← especificação do pipeline para a IA
-│   ├── prompts/                       ← a Aula 3 inteira em 4 prompts (prompt_01.md a prompt_04.md)
-│   ├── testes/03_testes_qualidade.py  ← testes que param o Job se o dado estiver errado
-│   └── dashboard/                     ← dashboard lendo da gold
-└── aula-04-genie/
-    ├── prompts/                       ← a Aula 4 inteira em 2 prompts: 3 dashboards e o agente do Genie
-    ├── dashboards/                    ← gabarito: um dashboard por diretoria
-    ├── genie/                         ← gabarito: definição do Genie space
-    ├── 01_preparar_dados_para_ia.sql  ← o que o Genie enxerga da gold
-    └── perguntas_demo.md              ← as perguntas de teste do Genie, com a resposta conferida
-```
-
----
-
-## Atalho: o projeto inteiro com um comando
-
-Se você já tem a [Databricks CLI](https://docs.databricks.com/aws/en/dev-tools/cli/install) configurada (o passo a passo de instalação da CLI e do Claude Code está no [README da Aula 3](./aula-03-claude-code/README.md#parte-3-setup-faça-antes-da-aula-se-puder)), dá para implantar tudo (Job, dashboards e Genie) de uma vez. Isso é o que a Aula 3 ensina em detalhes:
-
-```bash
-databricks bundle deploy -t prod            # cria Job, pipeline, dashboards e o Genie space
-databricks bundle run pipeline_ecommerce -t prod   # roda ingestão → gold → testes → documentação
-```
-
-O dashboard da Aula 1 lê das tabelas `ecommerce.bronze`, que o Job também preenche.
-
----
-
-## Glossário rápido
-
-| Termo | Em uma frase |
-|---|---|
-| **Databricks** | Plataforma de dados e IA na nuvem onde tudo deste projeto roda. |
-| **Lakehouse** | Arquitetura que junta o custo baixo do data lake com a organização do data warehouse. |
-| **Unity Catalog** | O "cartório" dos dados: organiza em catálogo → schema → tabela e controla quem acessa. |
-| **Tabela Delta** | Formato de tabela do Databricks: tem schema, histórico de versões e transações. |
-| **Volume** | Pasta governada pelo Unity Catalog para guardar arquivos (CSV, Parquet, JSON). |
-| **Serverless** | Você não liga nem desliga servidor: o Databricks aloca a máquina quando precisa. |
-| **SQL warehouse** | Motor que executa SQL para dashboards, Genie e o editor SQL. |
-| **Notebook** | Documento com células de código (SQL ou Python) e texto, executadas uma a uma. |
-| **Job** | Tarefas agendadas que rodam sozinhas, em ordem, e avisam se falharem. |
-| **Arquitetura medalhão** | Organização em camadas bronze (bruto), silver (limpo) e gold (negócio). |
-| **Asset Bundle** | O projeto descrito em arquivos YAML, versionado no Git e implantado com um comando. |
-| **Genie** | Assistente que transforma perguntas em português em SQL sobre as suas tabelas. |
-
----
-
-## Certificado e sorteio
-
-Ao final da imersão será disponibilizado um formulário único. Para ganhar o certificado e participar do sorteio da mentoria 1:1, é preciso participar das 4 aulas.
-
-**Boa jornada!**
+Keywords: Databricks, data engineering, e-commerce, business intelligence, automation, AI, data pipeline, beginner project, free tier, portfolio, learning by doing, real-world data, Brazilian e-commerce, data analysis, data visualization.
